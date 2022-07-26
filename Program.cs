@@ -14,4 +14,19 @@ int CountElements(string[] array)
     return count;
 }
 
+string[] MainTask(string[] inputArray, int newArrLength)
+{
+    string[] outputArray = new string[newArrLength];
+    int index = 0;
+    for (int i = 0; i < inputArray.Length; i = i + 1)
+    {
+        if (inputArray[i].Length <= 3)
+        {
+            outputArray[index] = inputArray[i];
+            index = index + 1;
+        }
+    }
+    return outputArray;
+}
+
 string[] inputArray = { "hello", "2", "world", ":-)" };
