@@ -29,4 +29,21 @@ string[] MainTask(string[] inputArray, int newArrLength)
     return outputArray;
 }
 
+string Print(string[] array)
+{
+    int length = array.Length;
+    string output = String.Empty;
+    for (int i = 0; i < length; i++)
+    {
+        output += ($"{array[i]}, ");
+    }
+    return output;
+}
+
 string[] inputArray = { "hello", "2", "world", ":-)" };
+string input = Print(inputArray);
+Console.WriteLine($"Исходный массив: [{input}]");
+int outputArrayLength = CountElements(inputArray);
+string[] outputArray = MainTask(inputArray, outputArrayLength);
+string output = Print(outputArray);
+Console.WriteLine($"Итоговый массив: [{output}]");
